@@ -10,6 +10,7 @@
   "default_locale": "en",
   "background": {
     "scripts": [
+      "bower_components/jquery/dist/jquery.min.js",
       "scripts/background.js"
     ],
     "persistent": true
@@ -18,8 +19,10 @@
   "permissions": [
     "activeTab",
     "http://*/*",
-    "https://*/*"
+    "https://*/*",
+    "storage"
   ],
+  "options_page": "templates/options.html",
   "content_scripts": [
     {
       "matches": [
@@ -27,10 +30,13 @@
       ],
       "js": [
         "bower_components/jquery/dist/jquery.min.js",
+        "bower_components/angular/angular.js",
+        "scripts/suggestionsApp.js",
         "scripts/contentscript.js"
       ],
+      "css": ["styles/main.css"],
       "run_at": "document_end",
-      "all_frames": false
+      "all_frames": true
     }
   ],
   "page_action": {
@@ -42,6 +48,7 @@
   },
   "web_accessible_resources": [
     "templates/suggestions.html",
+    "templates/index.html",
     "templates/loading.html"
   ]
 

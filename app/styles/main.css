@@ -1,3 +1,19 @@
-body {
-  padding: 20px;
+
+.suggestions {
+  padding: 10px 8px 10px 12px;
+}
+
+.suggestions .choice {
+  background-color: #f1f0f0;
+  color: rgba(0, 0, 0, 1);
+  margin: 1px 0;
+  padding: 6px 12px;
+  border-radius: 4px;
+  line-height: 1.28;
+}
+
+.suggestions .choice:hover {
+  cursor: pointer;
+  background-color: #0084ff;
+  color: #ffffff;
 }

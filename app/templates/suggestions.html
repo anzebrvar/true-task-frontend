@@ -1,11 +1,13 @@
-<div class="suggestions">
-    <div class="first">
-        First
-    </div>
-    <div class="second">
-        Second
-    </div>
-    <div class="third">
-        Third
+<div ng-app="suggestionsApp" class="suggestions" ng-controller="ChoiceController">
+    <div>
+        <div class="choice" title="{{suggestions.first.confidence * 100 | number:0 }}% confidence" ng-click="insertMessage(suggestions.first.text)">
+            {{ suggestions.first.text }}
+        </div>
+        <div class="choice" title="{{suggestions.second.confidence * 100 | number:0 }}% confidence" ng-click="insertMessage(suggestions.second.text)">
+            {{ suggestions.second.text }}
+        </div>
+        <div class="choice" title="{{suggestions.second.confidence * 100 | number:0 }}% confidence" ng-click="insertMessage(suggestions.third.text)">
+            {{ suggestions.third.text }}
+        </div>
     </div>
 </div>
