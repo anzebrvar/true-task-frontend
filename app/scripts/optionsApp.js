@@ -6,8 +6,6 @@ app.controller('OptionsController', function OptionsController($scope) {
   $scope.contextSize = 3;
 
   chrome.storage.sync.get(['contextSize'], function(items) {
-    console.log("restoring items", items);
-
     if (items.contextSize){
       $scope.$apply(function(){
         $scope.contextSize = items.contextSize;

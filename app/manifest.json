@@ -22,7 +22,11 @@
     "https://*/*",
     "storage"
   ],
-  "options_page": "templates/options.html",
+  "options_ui": {
+    "page": "templates/options.html",
+    "chrome_style": true
+
+  },
   "content_scripts": [
     {
       "matches": [
@@ -48,6 +52,7 @@
   },
   "web_accessible_resources": [
     "templates/suggestions.html",
+    "templates/options.html",
     "templates/index.html",
     "templates/loading.html"
   ]
